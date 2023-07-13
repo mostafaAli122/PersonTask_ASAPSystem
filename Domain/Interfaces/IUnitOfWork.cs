@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Domain.Interfaces
+{
+    public interface IUnitOfWork :IDisposable
+    {
+        IAdressRepository Addresses { get; }
+
+        IPersonRepository Persons { get; }
+        IUserRepository Users { get; }
+
+        int Save();
+    }
+}
